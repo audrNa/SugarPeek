@@ -1,0 +1,16 @@
+.banner {
+    background-color: grey;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.banner-text {
+    font-size: 35px;
+    padding: 0px 50px;
+    width: 800px;
+}
