@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
     imageCard = gallery.children[0].cloneNode(true);
 
     generateGallery();
+
+    let imageModal = document.getElementById("productModal");
+    imageModal.addEventListener("show.bs.modal", openImageModal);
 });
 
 // Creates all cards for each image link in products data
@@ -34,6 +37,8 @@ function createCard(src) {
 }
 
 // TODO: Image modal viewer
-function openImageModal() {
-
+function openImageModal(event) {
+    let clickedImageSrc = event.relatedTarget.src;
+    let img = document.getElementById("modalImage");
+    img.src = clickedImageSrc;
 }

@@ -6,6 +6,7 @@
 </script>
 <script src="scripts/mimiru.js"></script>
 
+<link href="/styles/products.css" rel="stylesheet">
 <script src="scripts/products.js"></script>
 
 <!-- Body -->
@@ -14,9 +15,24 @@
 <div id="gallery" class="container d-flex flex-wrap justify-content-center">
 
   <div class="m-2 d-none" style="width: 18rem;">
-    <img src="" class="rounded card-img-top" alt="Sample image card">
+    <img src="" class="product-image rounded card-img-top" alt="Sample image card" data-bs-toggle="modal" data-bs-target="#productModal">
   </div>
 
 </div>
 
 <div class="fs-3 my-2 text-center">&Rang; <a href="https://www.facebook.com/sugarpeekcakesph/">See all official posts in the Facebook page!</a></div>
+
+<!-- Modal -->
+<div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="modalLabel">Sugar Peek Cakes & Pastries</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body mx-auto">
+        <img id="modalImage" src="assets/products/cake_04.jpg" class="img-fluid rounded">
+      </div>
+    </div>
+  </div>
+</div>
