@@ -25,12 +25,16 @@ function setTemplate(template) {
         let head = Array.from(html.head.children);
         let body = Array.from(html.body.children);
 
-        for (const child of head) {
-            document.head.prepend(child);
+        for (let child of body) {
+            document.body.prepend(child);
         }
 
-        for (const child of body) {
-            document.body.prepend(child);
+        for (let child of head) {
+            // Reload child if it is a <script> tag
+            if (child.tagName == "SCRIPT") {
+                child = recreateScript(child);
+            }
+            document.head.append(child);
         }
 
         // Set the current active page on navbar if it exists in the template
@@ -41,6 +45,15 @@ function setTemplate(template) {
         setNavBarActive(navbarNav);
 
     });
+}
+
+// Creates a new <script> tag from original and returns it
+function recreateScript(original) {
+    let script = document.createElement("script");
+    script.src = original.src;
+    script.setAttribute("integrity", original.getAttribute("integrity"));
+    script.setAttribute("crossorigin", original.getAttribute("crossorigin"));
+    return script;
 }
 
 // Sets the active link in navbarNav depending on the current page
