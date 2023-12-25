@@ -72,8 +72,7 @@ function setNavBarActive(navbarNav) {
     let items = navbarNav.children[0].children;
     for (const item of items) {
         let a = item.children[0];
-        if (a.href == filename ||
-            a.href == window.location.hostname) {
+        if (a.href == filename) {
             // Set this link as the active one
             a.classList.add("active");
             a.setAttribute("aria-current", "page");
