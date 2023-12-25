@@ -18,3 +18,14 @@
 footer {
     padding: 50px;
 }
+
+ul.line-list, ol.line-list {
+    list-style-type: none;
+    padding: 0;
+    line-height: 40px;
+}
+
+.emoji {
+    width: 24px;
+    height: 24px;
+}
