@@ -25,9 +25,17 @@ function setTemplate(template) {
         let head = Array.from(html.head.children);
         let body = Array.from(html.body.children);
 
+        let footer;
         for (let child of body) {
+            // Save footer for last
+            if (child.tagName == "FOOTER") {
+                footer = child;
+                continue;
+            }
             document.body.prepend(child);
         }
+        document.body.append(footer);
+
 
         for (let child of head) {
             // Reload child if it is a <script> tag
