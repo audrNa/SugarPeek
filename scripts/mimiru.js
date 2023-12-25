@@ -22,8 +22,8 @@ function setTemplate(template) {
         }
 
         // Set the head and body
-        let head = html.head.children;
-        let body = html.body.children;
+        let head = Array.from(html.head.children);
+        let body = Array.from(html.body.children);
 
         for (const child of head) {
             document.head.prepend(child);
