@@ -1,0 +1,2 @@
+# Sugar Peek Website
+This is an unofficial website created by [audrNa](https://audrna.github.io/) as a school project. Check out its official [Facebook page](https://www.facebook.com/sugarpeekcakesph/) instead.
